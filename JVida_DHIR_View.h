@@ -15,6 +15,14 @@ void mostrarCoordInvalida();
 void mostrarDespedida();
 void mostrarOpcaoInvalida();
 void mostrarEstadoMortos(int estado);
-
+void mostrarSalvoOk();
+void mostrarCarregadoOk();
+void mostrarFimGeracoes();
+void mostrarErroArquivo();
+void mostrarContagem(int vivas, int mortas);
+void pedirQtdGeracoes(int *qtd);
+void pedirVelocidade(int *vel);
+void mostrarNumGeracao(int g, int total);
+void esperarVelocidade(int vel);
 
 #endif
