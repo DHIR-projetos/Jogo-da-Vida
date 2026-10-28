@@ -113,6 +113,16 @@ void pedirCoordenadas(int *l, int *c) { /* * indica ponteiro, onde guarda o "end
     }
 }
 
+void contAdicionar(){
+	char a = 'n';
+	printf("Deseja adicionar mais celulas (s/n)? ");
+	scanf("%c", &a);
+	if (a == 's' || a == 'S'){
+		void pedirCoordenadas(int *l, int *c);
+	}
+ //falta coisa 
+}
+
 int perguntarExcluir() {
     char e = 'n';
     printf("Ja existe uma celula viva aqui. Excluir? (s/n): ");
