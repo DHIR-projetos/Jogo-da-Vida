@@ -24,5 +24,7 @@ void pedirQtdGeracoes(int *qtd);
 void pedirVelocidade(int *vel);
 void mostrarNumGeracao(int g, int total);
 void esperarVelocidade(int vel);
+void limparTela();
+void pausar();
 
 #endif
