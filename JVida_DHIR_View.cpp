@@ -8,6 +8,7 @@ Rafaella Castro Zandona Alves de Lima */
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
+#include <stdlib.h>
 #include "JVida_DHIR_View.h"
 
 
@@ -70,16 +71,23 @@ int pedirDim() {
 void mostrarMenu() {
     printf("\n  J O G O   D A   V I D A\n");
     printf("===========================\n");
-    printf("1 - Apresentar o Mapa\n");
-    printf("2 - Limpar mapa\n");
-    printf("3 - Incluir/excluir celulas vivas\n");
-    printf("4 - Mostrar/Esconder os mortos-vizinhos\n");
-    printf("5 - Salvar geracao no arquivo\n");
-    printf("6 - Carregar proxima geracao do arquivo\n");
-    printf("7 - Avancar uma geracao\n");
-    printf("8 - Simular geracoes\n");
+    printf("1 - Incluir/excluir celulas vivas\n");
+    printf("2 - Mostrar/Esconder os mortos-vizinhos\n");
+    printf("3 - Salvar geracao no arquivo\n");
+    printf("4 - Carregar proxima geracao do arquivo\n");
+    printf("5 - Avancar uma geracao\n");
+    printf("6 - Simular geracoes\n");
     printf("0 - Sair\n");
     printf("Opcao selecionada: ");
+}
+
+void limparTela() {
+    system("cls");
+}
+
+void pausar() {
+    printf("Aperte qualquer tecla para continuar...\n");
+    getch();
 }
 
 int lerOpcao() {
@@ -117,7 +125,7 @@ int perguntarExcluir() {
 }
 
 void mostrarCoordInvalida() {
-    printf("Coordenada invalida!\n"); /* case 3 */
+    printf("Coordenada invalida!\n"); /* case 2 */
 }
 
 void mostrarDespedida() {
