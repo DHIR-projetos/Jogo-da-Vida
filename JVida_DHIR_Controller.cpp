@@ -37,7 +37,8 @@ void iniciar() {
         op = lerOpcao();
         switch (op) {
             case 1:
-    			pedirCoordenadas(&l, &c);
+    			do {
+				pedirCoordenadas(&l, &c);
     				if (!coordValida(l, c)) {
         			mostrarCoordInvalida();
         			pausar();
@@ -48,6 +49,8 @@ void iniciar() {
     			} else {
        				incluirCelula(l, c);
     			}
+    			contAdicionar();
+				} while (op = 1);
     			break;
     		case 2:
     			mostrarMortos = !mostrarMortos;
