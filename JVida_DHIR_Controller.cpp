@@ -31,19 +31,16 @@ void iniciar() {
     limparMapa(); 
 
     do {
+    	limparTela();
+    	apresentarMapa();
         mostrarMenu();
         op = lerOpcao();
         switch (op) {
             case 1:
-                apresentarMapa();
-                break;
-            case 2:
-                limparMapa();
-                break;
-            case 3:
     			pedirCoordenadas(&l, &c);
     				if (!coordValida(l, c)) {
         			mostrarCoordInvalida();
+        			pausar();
     				} else if (celulaViva(l, c)) {
         			if (perguntarExcluir()) {
         		    excluirCelula(l, c);
@@ -52,11 +49,11 @@ void iniciar() {
        				incluirCelula(l, c);
     			}
     			break;
-    		case 4:
+    		case 2:
     			mostrarMortos = !mostrarMortos;
     			mostrarEstadoMortos(mostrarMortos);
     			break;
-            case 5:
+            case 3:
                 resultado = salvarGeracao();
                 if (resultado == 1) {
                     mostrarSalvoOk();
@@ -64,7 +61,7 @@ void iniciar() {
                     mostrarErroArquivo();
                 }
                 break;
-            case 6:
+            case 4:
                 resultado = carregarGeracao();
                 if (resultado == 1) {
                     mostrarCarregadoOk();
@@ -74,11 +71,11 @@ void iniciar() {
                     mostrarErroArquivo();
                 }
                 break;
-            case 7:
+            case 5:
                 proximaGeracao();
                 apresentarMapa();
                 break;
-			case 8:
+			case 6:
     			pedirQtdGeracoes(&qtd);
     			pedirVelocidade(&vel);
     			for (g = 1; g <= qtd; g++) {
@@ -89,7 +86,7 @@ void iniciar() {
         				esperarVelocidade(vel);
         			}
     			}
-    			break;    
+    			pausar();    
             case 0:
                 mostrarDespedida();
                 break;
