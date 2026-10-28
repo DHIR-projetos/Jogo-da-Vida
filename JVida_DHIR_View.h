@@ -26,5 +26,6 @@ void mostrarNumGeracao(int g, int total);
 void esperarVelocidade(int vel);
 void limparTela();
 void pausar();
+void contAdicionar();
 
 #endif
