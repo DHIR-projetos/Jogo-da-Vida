@@ -84,13 +84,15 @@ void iniciar() {
     			pedirVelocidade(&vel);
     			for (g = 1; g <= qtd; g++) {
         			proximaGeracao();
+					limparTela();
         			mostrarNumGeracao(g, qtd);
         			apresentarMapa();
         			if (g < qtd){
         				esperarVelocidade(vel);
         			}
     			}
-    			pausar();    
+    			pausar();
+				break;
             case 0:
                 mostrarDespedida();
                 break;
