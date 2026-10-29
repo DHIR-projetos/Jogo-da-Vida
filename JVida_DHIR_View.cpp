@@ -113,14 +113,24 @@ void pedirCoordenadas(int *l, int *c) { /* * indica ponteiro, onde guarda o "end
     }
 }
 
-void contAdicionar(){
+int contAdicionar(){
 	char a = 'n';
-	printf("Deseja adicionar mais celulas (s/n)? ");
-	scanf("%c", &a);
-	if (a == 's' || a == 'S'){
-		void pedirCoordenadas(int *l, int *c);
+	while(1){
+		printf("Deseja adicionar mais celulas (s/n)? ");
+		if (scanf("%c", &a) == EOF){ // EOF = End Of File (fim do arquivo), nao ha mais nada para ler
+			return 0;
+		}
+		limparBuffer();
+		if (a == 's' || a == 'S'){
+			return 1;
+		}
+		else if (a == 'n' || a == 'N'){
+			return 0;
+		}
+		else {
+			printf("Digite uma tecla valida!\n");
+		}
 	}
- //falta coisa 
 }
 
 int perguntarExcluir() {
