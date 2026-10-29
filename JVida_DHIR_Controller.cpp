@@ -26,6 +26,7 @@ void iniciar() {
     int qtd; //quantidade
     int vel; //velocidade
     int g; //geracao
+    int continuar;
 
     dim = pedirDim();
     limparMapa(); 
@@ -43,14 +44,14 @@ void iniciar() {
         			mostrarCoordInvalida();
         			pausar();
     				} else if (celulaViva(l, c)) {
-        			if (perguntarExcluir()) {
-        		    excluirCelula(l, c);
-        			}
-    			} else {
-       				incluirCelula(l, c);
-    			}
-    			contAdicionar();
-				} while (op = 1);
+        				if (perguntarExcluir()) {
+        		    	excluirCelula(l, c);
+        				}
+    				} else {
+       					incluirCelula(l, c);
+    				}
+    				continuar = contAdicionar();
+				} while (continuar == 1);
     			break;
     		case 2:
     			mostrarMortos = !mostrarMortos;
