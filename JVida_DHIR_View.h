@@ -1,6 +1,9 @@
-// JVida_DHIR_View.h
-// 13/10/2026
-// Daniel Luis de Amorim Mariano Santos, Henrique Campos Rodrigues, Isabella de Souza Fleury, Rafaella Castro Zandona Alves de Lima 
+//JVida_DHIR_View.h
+//03/11/2026
+//Daniel Luis de Amorim Mariano Santos
+Henrique Campos Rodrigues
+Isabella de Souza Fleury
+Rafaella Castro Zandona Alves de Lima */
 
 #ifndef JVida_DHIR_VIEW_H
 #define JVida_DHIR_VIEW_H
@@ -26,6 +29,6 @@ void mostrarNumGeracao(int g, int total);
 void esperarVelocidade(int vel);
 void limparTela();
 void pausar();
-void contAdicionar();
+int contAdicionar();
 
 #endif
